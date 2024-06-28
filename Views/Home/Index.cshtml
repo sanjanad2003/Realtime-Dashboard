@@ -1,0 +1,83 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<html>
+<head>
+    <title>My Project</title>
+    <style>
+        .myDiv {
+            border-radius: 5%;
+            height: 175px;
+            width: 25%;
+            background-color: rgb(231, 248, 246);
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 80%;
+        }
+
+        .myDiv1 {
+            color: azure;
+            padding: 10px;
+            border-color: rgb(25, 136, 255);
+            width: 40%;
+            border-radius: 10%;
+            border-width: 2px;
+            background-color: rgb(25, 136, 255);
+            font-size: medium;
+        }
+
+        h2 {
+            background-color: rgb(231, 248, 246);
+            padding: 10px;
+            opacity: 80%;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 37px;
+        }
+
+        :placeholder-shown {
+            font-style: italic;
+        }
+    </style>
+</head>
+<body background="C:\Users\sanja\Downloads\tatahd.jpg">
+    <h2 align="center">Development of a Real-Time Dashboard for Visualisation of Key Process Parameters.</h2></div>
+
+    <div class="myDiv" style="font-size: 20px; font-family: Arial, Helvetica, sans-serif">
+        <br>
+        Username: <input id="A" type="email" placeholder="Your email" required><br><br> </input>
+        Password: <input id="B" type="password" placeholder="Your password" required> <br> <br></input>
+
+        @* <a href="Home/link">
+                <button class="myDiv1" type="button">Login &rarr;</button>
+            </a> *@
+
+        <button class="myDiv1" type="button" onclick="navigateToAnotherPage">Login &rarr;</button>
+
+        <p id="demo"></p>
+    </div>
+    <script>
+        function navigateToAnotherPage() {
+                    String ConnectionString = "Data Source=SANJANA-PC\SQLEXPRESS;Initial Catalog=MyProject;Integrated Security=True;Encrypt=True;Trust Server Certificate=True";
+
+        }
+        function Validation()
+        {
+            const c1 = document.getElementById('A');
+            const c2 = document.getElementById('B');
+            if(!c1.checkValidity() || !c2.checkValidity())
+            {
+                document.getElementById("demo").innerHTML=c1.validationMessage + " " + c2.validationMessage
+            }
+            else
+            {
+                document.getElementById("demo").innerHTML= "Input is OK"
+            }
+        }
+    </script>
+</body>
+</html>
